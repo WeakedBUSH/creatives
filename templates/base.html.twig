@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CREATIVES WEBSITE made with symfony 5, Html, Css, Javascript, for school project purpose">
+        <meta name="author" content="AOUIMER Ramzi">
+        <meta name="keywords" content="SYMFONY,HTML,CSS,JAVASCRIPT,FONTAWESOME,WEBSITE">
+        <title>{% block title %}CREATIVES MOST SIMPLE SYMFONY 5 SITE | INTEGRATION TEMPLATE{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+        {# LIBRAIRIE FONT AWESOME EN CDN #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/brands.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/fontawesome.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/regular.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/solid.min.css" integrity="sha512-LUxUs00S05YspUb2HCuUTBqTqbjJm2uNvwRXVTcl/jkr9ygYZptXhfknc52iBnPUNgHHHC9ivU4RV6UFxLxhfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/svg-with-js.min.css" integrity="sha512-OiNHhQwzS1LlbvAM+EbRs/LeCL5RhAkv2pvr432TxTFGcxNcG6I8VVII7s4dUVwJJG7HtHKvsR7zzD5vuSlAlA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/v4-font-face.min.css" integrity="sha512-RiiIeQoUxWFBj0r8eZ49ooAfgtvwzW2pUMpxsWPYwn7u39JzHYxN8Bmb3AwXjnvjoFf4n4TQNgmB+BLYTZChVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/v4-shims.min.css" integrity="sha512-UtgpaUQPTevIy6walAy8W82eDxOdZJqKS0w2vf0eTItGubnT6TKkbM1GoNyoNvlM4DKhbl45kOK+Z4EhtuK2RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/v5-font-face.min.css" integrity="sha512-HoJcK6M3SQctK5xy9FlRUy0X4HsoUY5DZpqK5LuuTVbeJNlH8j3PyfGIs0oHmxzl4+mHfAyWd5w4T7kMO81c9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     {# LIBRAIRIE FONT AWESOME EN CDN #}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+        {# LIBRAIRIE FONT AWESOME EN CDN #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js" integrity="sha512-Cvxz1E4gCrYKQfz6Ne+VoDiiLrbFBvc6BPh4iyKo2/ICdIodfgc5Q9cBjRivfQNUXBCEnQWcEInSXsvlNHY/ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/conflict-detection.min.js" integrity="sha512-wyrFXdo6GfIooWayLbVbvq0BFXnZrakBzU/o5030w+gvrtfUaoYoj8x/8onlhHKyl5ARKcoy2tsnOeaWpAo7mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/fontawesome.min.js" integrity="sha512-cy6kInQVR+bdZEOpaATN8oqOzdelm2KUbEcsNlSofYQcxX8wVno7NTQ6PP0vssTUY7VnNtlwBkDV4rQ7j0/fvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/regular.min.js" integrity="sha512-057HhOVZMtQFQ586SWogWKKfb7A2JK050j/TPJiWp+ngB0lPTOS/4H2OqL3QNQjtAMAGfFQEVWDgC0UFkDgpuw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/solid.min.js" integrity="sha512-603172ShPQC31NW0ycqvdSmWNP2KD8p0eiWj5hdu+dLsFUi4r8kMzweq9zwmAEJ+f9Kl21mdcEqvEPVujGip7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/v4-shims.min.js" integrity="sha512-yCXeg9jS4gRiqvx/ySAc7UvlEC4n7r7SKT13Fhje4eZ3mufA4YW1llR5rcX9cC5ZfK0OfxJRCrjwiIvJfeH5Cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            {{ encore_entry_script_tags('app') }}
+            {# LIBRAIRIE FONT AWESOME EN CDN #}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
