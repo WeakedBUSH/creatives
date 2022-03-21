@@ -20,30 +20,24 @@ class HomeController extends AbstractController
     public function index(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager): Response
     {   
         $form = $this->createForm(ContactType::class);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $contact = $form->getData();
+            //envoie du mail
+            $email = (new Email())
+            ->from('noreplyCreatives@gmail.com')
+            ->to($contact->getEmail())
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            //->priority(Email::PRIORITY_HIGH)
+            ->subject('DEMANDE DE CONTACT')
+            ->text('Creatives support mailer')
+            ->html('<p>Nous avons bien reçu votre demande de contact, nous reviendrons vers vous très bientôt!!!</p>');
+
+        $mailer->send($email);
         
-       
-//         // $contact = new Contact();
-//         $form = $this->createForm(ContactType::class);
-//         $form->handleRequest($request);
-        
-// //    $entityManager->persist($contact);
-// //         $entityManager->flush();
-
-//         if ($form->isSubmitted() && $form->isValid()) {
-
-        
-
-       
-//             $email = (new TemplatedEmail())
-//             ->from(new Address('blockchain@gmail.com', 'Blockchain bot'))
-//             ->to($contact->getEmail())
-//             ->subject('Veuillez confirmer votre addresse mail.')
-//             ->htmlTemplate('home/contact-mail.html.twig');
-
-//             // $mailer->send($email);
-//             $this->addFlash('success', 'Merci votre message à bien été pris en compte, nous reviendrons vers vous très prochainement');
-            
-//     }
+        }
 
     return $this->render('home/index.html.twig', [
         'controller_name' => 'HomeController',
