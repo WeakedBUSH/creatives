@@ -36,7 +36,7 @@ class HomeController extends AbstractController
             ->html('<p>Nous avons bien reçu votre demande de contact, nous reviendrons vers vous très bientôt!!!</p>');
             $this->addFlash('success', 'Votre demande de contact à bien été pris en compte.');
         $mailer->send($email);
-        
+        return $this->redirect($this->generateUrl('app_home'));
         }
 
     return $this->render('home/index.html.twig', [
