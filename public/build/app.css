@@ -20,6 +20,40 @@ section{
     align-self: center;
     text-align: center;
 }
+#scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+.scroll-down{
+height: 3em;
+width: 3em;
+border: 2px solid white;
+border-radius: 3em;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.arrow{
+  animation: scroll-down 1s ease-out infinite;
+}
+
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 
 /*TEXT*/
 p{
@@ -41,7 +75,7 @@ h5{
     letter-spacing: 1em;
 }
 #bold-t{
-    margin-top: 1em;
+  
     font-weight: 700;
     letter-spacing: 0.1em;
     font-size: 9em;
@@ -72,6 +106,11 @@ h5{
 #header{
     background-image:url('../assets/img/headerphoto.png') ;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     height: 100vh;
     width: 100%;
 }
@@ -81,7 +120,6 @@ h5{
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3,1fr);
     background-color: #11749e;
-    background-position: cover;
     height: 736px;
     width: 100%;
 }
@@ -258,11 +296,222 @@ h5{
 
 /*CONTACT SECTION*/
 #contact{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url('../assets/img/photo3.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
     width: 100%;
 }
+#contact-title{
+    grid-row: 1/2;
+    grid-column: 1/7;
+    align-items: center;
+    align-self: center;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-size:2.5em;
+    z-index: 100;
+    color: white;
+}
+#C{
+    grid-row: 1/2;
+    grid-column: 1/7;
+    align-items: center;
+    align-self: center;
+    font-size: 16em;
+    font-weight:300;
+    letter-spacing: 0.1em;
+    z-index: 1;
+    color: rgba(78, 78, 78, 0.658);
+
+}
+#form{
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 2/6;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: stretch;
+}
+/*INPUT STYLING*/
+input{
+    color: white;
+    width: 100%;
+    background:transparent;
+}
+input[type=text]:focus {
+    border: 2px solid white;
+  }
+  input[type=email]:focus {
+    border: 2px solid white;
+  }
+input[type=text]{
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-transition: 0.2s;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 3px solid #555;
+    transition: 0.5s;
+    outline: none;
+}
+input[type=email]{
+    box-sizing: border-box;
+    width: 100%;
+    border: 3px solid #555;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+/* END INPUT STYLING*/
+
+/* TEXTAREA FOR THE MESSAGE STYLING*/
+textarea:focus{
+    border: 3px solid #ccc;
+}
+
+textarea{
+    height: auto;
+    background:transparent;
+    box-sizing: border-box;
+    -webkit-transition: 0.2s;
+    padding: 12px 20px;
+    width: 100%;
+            min-height: 75px;
+    border: 3px solid #555;
+    transition: 0.5s;
+    outline: none;
+    color: white;
+}
+/* END TEXTAREA FOR THE MESSAGE STYLING*/
+
+#name{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 1em;
+    
+}
+.email{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin: 1em;
+}
+
+.phone{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin: 1em;
+}
+.message{
+    grid-row: 2/3;
+    grid-column: 1/4;
+    margin: 1em;
+}
+.button-container{
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.btn{
+    margin: 2em;
+    background-color: #0078bd;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 /*END CONTACT SECTION*/
+@media screen and (max-device-width:920px)  { 
+    /* tablet */ 
+
+    /* header */ 
+    #bold-t{
+        margin-top: 0.5em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        font-size: 6em;
+        color: white;
+    }
+
+        /* agency */ 
+    #agency-grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3,1fr);
+        background-color: #11749e;
+        height: auto;
+    }
+    #F1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column:3/4;
+        margin: 5px;
+        
+        
+    }
+    #F2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column:4/5;
+        margin: 5px;
+    }
+    #F3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 3/4;
+        grid-row: 3/4;
+        margin: 5px;
+        margin-bottom: 2em;
+    }
+    #F4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 4/5;
+        grid-row: 3/4;
+        margin: 5px;
+        margin-bottom: 2em;
+    }
+        /* ARTICLES */ 
+ #article-container{
+     height: auto;
+     width: auto;
+
+ }
+ #article-date{
+     margin: 5px;
+
+ }
+ .article-content{
+     width: auto;
+ }
+ .article2-content{
+    width: auto;
+}
+#article1{
+    flex-direction: column-reverse;
+}
+/*INFORMATION SECTION*/
+#info1 #info2{
+    flex-direction: column;
+ }
+}
+
+@media screen and (min-width:425px)  { 
+    /* mobile */
+    
+}

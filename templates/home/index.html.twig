@@ -2,33 +2,40 @@
 
 {% block title %}CREATIVES{% endblock %}
 
-{% block body %}
+
+{% block body %} 
 <section id="header">
 <h1 id="bold-t">CREATIVES</h1>
 <h5 >POWER BY PSDFREEBIES.COM</h5>
-<div id="scroll"><p>Scroll Down</p></div>
+<div id="scroll">
+<p>Scroll Down</p>
+<a href="#agency-grid">
+<div class="scroll-down"><i style="color:white;" class="arrow fa-solid fa-angles-down"></i></div>
+</a>
+</div>
 </section>
 
 <section id="agency-grid">
-<h1 id="medium-t">WE ARE AN AWESOME AGENCY</h1>
+<h1 class="wow fadeInLeft" id="medium-t">WE ARE AN AWESOME AGENCY</h1>
 <h2 id="W">W</h2>
-    <div id="F1">
-    <div class="circle"><i style="width:30px; height:30px; color:white;" class="fa-solid fa-pen-to-square"></i></div>
-    <h6>FEATURE ONE</h6>
-    <p>Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor</p>
-    </div>
 
-<div id="F2">
+<div id="F1" class="wow fadeInUp">
+<div class="circle"><i style="width:30px; height:30px; color:white;" class="fa-solid fa-pen-to-square"></i></div>
+<h6>FEATURE ONE</h6>
+<p>Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor</p>
+</div>
+
+<div id="F2" class="p wow fadeInUp">
 <div class="circle"><i style="width:30px; height:30px; color:white;" class="fa-solid fa-pen-to-square"></i></div>
 <h6>FEATURE TWO</h6>
 <p>Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor.</p>
 </div>
-<div id="F3">
+<div id="F3"  class="wow fadeInUp">
 <div class="circle"><i style="width:30px; height:30px; color:white;"  class="fa-solid fa-magnifying-glass"></i></div>
 <h6>FEATURE THREE</h6>
 <p>Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor</p>
 </div>
-<div id="F4">
+<div id="F4"  class="wow fadeInUp">
 <div class="circle"><i style="width:30px; height:30px; color:white;" class="fa-regular fa-comment"></i></div>
 <h6>FEATURE FOUR</h6>
 <p>Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor</p>
@@ -37,8 +44,8 @@
 </section>
 
 <section id="article">
-<article id="article1">
-    <div class="article-container">
+<article id="article1" class="wow fadeInLeft">
+    <div class="article-container ">
     <p id="article-date">Jan 4, 2016   |   Culture</p>
     <h1 id="article-title">AKITA INU DOG</h1>
     <p class="article-content">
@@ -49,11 +56,11 @@
     </div>
 </article>
 
-<div id="illustration1"></div>
+<div id="illustration1" class="wow fadeInRight"></div>
 
-<article id="article2">
+<article id="article2" class="wow fadeInLeft">
 
- <div class="article2-container">
+ <div class="article2-container" >
     <p id="article2-date">Jan 4, 2016   |   Culture</p>
     <h1 id="article2-title">AKITA INU DOG</h1>
     <p class="article2-content">
@@ -63,20 +70,48 @@
     </p>
     </div>
 </article>
-<div id="illustration2"></div>
+<div id="illustration2" class="wow fadeInLeft"></div>
 </section>
 <section id="info">
-<div id="info1">
+<div id="info1" class="wow fadeInLeft">
 <i style="width:100px; height:100px; color:white;" class="fa-solid fa-pen-to-square"></i>
 <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 </div>
-<div id="info2">
+<div id="info2" class="wow fadeInRight">
 <i style="width:100px; height:100px; color:white;" class="fa-solid fa-pen-to-square"></i>
 <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 </div>
 </section>
 <section id="contact">
-<h1 id="medium-t">WE'D LOVE TO HEAR ABOUT YOUR PROJECT.</h1>
+<h1 id="contact-title" class="wow fadeInLeft">WE'D LOVE TO HEAR ABOUT YOUR PROJECT.</h1>
 <h2 id="C">C</h2>
+{# <div id="form"> #}
+    {{form_start(form, {'attr': {'id': 'form'}})}}
+<div id="name">
+    {{ form_row(form.lastname)}}
+</div>
+
+
+<div class="email">
+    {{ form_row(form.email)}}
+
+</div>
+<div class="phone">
+    {{ form_row(form.phone)}}
+
+</div>
+<div class="message">
+    {{ form_row(form.message)}}
+
+</div>
+
+<div class="button-container">
+{# {{form_row(form.submit)}} #}
+<input class="btn" type="submit" value="SUBMIT" />
+</div>
+   {{form_end(form)}}
+
+{# </div> #}
+          
 </section>
 {% endblock %}
