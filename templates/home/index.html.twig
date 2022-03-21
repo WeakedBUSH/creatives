@@ -6,6 +6,11 @@
 {% block body %} 
                                                      {# HEADER PART #}
 <section id="header">
+    {% for message in app.flashes('success') %}
+            <div class="alertmessage">
+                {{ message }}
+            </div>
+        {% endfor %}
 <h1 id="bold-t">CREATIVES</h1>
 <h5 >POWER BY PSDFREEBIES.COM</h5>
 <div id="scroll">
@@ -92,7 +97,7 @@
 <section id="contact">
 <h1 id="contact-title" class="wow fadeInLeft">WE'D LOVE TO HEAR ABOUT YOUR PROJECT.</h1>
 <h2 id="C">C</h2>
-{# <div id="form"> #}
+
     {{form_start(form, {'attr': {'id': 'form'}})}}
 <div id="name">
     {{ form_row(form.lastname)}}
@@ -118,7 +123,6 @@
 </div>
    {{form_end(form)}}
 
-{# </div> #}
           
 </section>
 {% endblock %}

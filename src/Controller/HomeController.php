@@ -34,7 +34,7 @@ class HomeController extends AbstractController
             ->subject('DEMANDE DE CONTACT')
             ->text('Creatives support mailer')
             ->html('<p>Nous avons bien reçu votre demande de contact, nous reviendrons vers vous très bientôt!!!</p>');
-
+            $this->addFlash('success', 'Votre demande de contact à bien été pris en compte.');
         $mailer->send($email);
         
         }
